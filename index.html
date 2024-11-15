@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Units Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    /* Relative units */
+    .em-example {
+      font-size: 2em; /* 2 times the size of the parent font size */
+      color: red;
+    }
+
+    .ex-example {
+      font-size: 2ex; /* 2 times the x-height of the current font */
+      color: green;
+    }
+
+    .ch-example {
+      width: 20ch; /* 20 characters width */
+      background-color: lightblue;
+    }
+
+    .rem-example {
+      font-size: 1.5rem; /* 1.5 times the root font size */
+      color: purple;
+    }
+
+    /* Viewport units */
+    .vh-example {
+      height: 50vh; /* 50% of viewport height */
+      background-color: yellow;
+    }
+
+    .vw-example {
+      width: 50vw; /* 50% of viewport width */
+      background-color: orange;
+    }
+
+    .vmin-example {
+      font-size: 10vmin; /* 10% of the smaller viewport dimension */
+      color: blue;
+    }
+
+    .vmax-example {
+      font-size: 10vmax; /* 10% of the larger viewport dimension */
+      color: darkgreen;
+    }
+
+    /* Absolute units */
+    .cm-example {
+      width: 5cm;
+      height: 2cm;
+      background-color: pink;
+    }
+
+    .mm-example {
+      width: 50mm;
+      height: 20mm;
+      background-color: lightgray;
+    }
+
+    .in-example {
+      width: 2in;
+      height: 1in;
+      background-color: cyan;
+    }
+
+    .px-example {
+      width: 100px;
+      height: 50px;
+      background-color: beige;
+    }
+
+    .pc-example {
+      font-size: 12pc; /* 1 pica = 12 points */
+      color: darkorange;
+    }
+
+    .pt-example {
+      font-size: 24pt; /* 1 point = 1/72 inch */
+      color: magenta;
+    }
+
+    h1 {
+      font-size: 2rem; /* Example of rem */
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .unit-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .unit-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    /* Relative Units */
+    .em-box {
+      font-size: 2em; /* Relative to the parent font size */
+      width: 10em;
+      height: 5em;
+      background-color: darkred;
+    }
+
+    .ex-box {
+      font-size: 2ex; /* Relative to the x-height of the font */
+      width: 20ex;
+      height: 10ex;
+      background-color: darkgreen;
+    }
+
+    .ch-box {
+      width: 30ch; /* Width relative to the width of the "0" character */
+      height: 10ch;
+      background-color: teal;
+    }
+
+    .rem-box {
+      font-size: 1.5rem; /* Relative to root font size */
+      width: 15rem;
+      height: 7rem;
+      background-color: purple;
+    }
+
+    /* Viewport Units */
+    .vh-box {
+      height: 20vh; /* 20% of the viewport height */
+      width: 30vw; /* 30% of the viewport width */
+      background-color: darkorange;
+    }
+
+    .vw-box {
+      height: 20vh; /* Same as vh for demo purposes */
+      width: 50vw; /* 50% of the viewport width */
+      background-color: navy;
+    }
+
+    .vmin-box {
+      font-size: 3vmin; /* Relative to the smaller of vw and vh */
+      width: 20vmin;
+      height: 10vmin;
+      background-color: olive;
+    }
+
+    .vmax-box {
+      font-size: 3vmax; /* Relative to the larger of vw and vh */
+      width: 20vmax;
+      height: 10vmax;
+      background-color: maroon;
+    }
+
+    /* Absolute Units */
+    .cm-box {
+      width: 5cm;
+      height: 3cm;
+      background-color: #ffc107;
+    }
+
+    .mm-box {
+      width: 50mm;
+      height: 30mm;
+      background-color: #6f42c1;
+    }
+
+    .in-box {
+      width: 2in;
+      height: 1in;
+      background-color: #fd7e14;
+    }
+
+    .px-box {
+      width: 150px;
+      height: 100px;
+      background-color: #20c997;
+    }
+
+    .pt-box {
+      width: 72pt; /* 1 inch */
+      height: 36pt; /* 0.5 inch */
+      background-color: #17a2b8;
+    }
+
+    .pc-box {
+      width: 6pc; /* 1 pica = 12 points */
+      height: 3pc;
+      background-color: #e83e8c;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <h1>CSS Units Examples</h1>
+
+
+  <section class="unit-container">
+    <!-- Relative Units -->
+    <div class="unit-box em-box">2em</div>
+    <div class="unit-box ex-box">2ex</div>
+    <div class="unit-box ch-box">30ch</div>
+    <div class="unit-box rem-box">1.5rem</div>
+  </section>
+
+  <section class="unit-container">
+    <!-- Viewport Units -->
+    <div class="unit-box vh-box">20vh x 30vw</div>
+    <div class="unit-box vw-box">20vh x 50vw</div>
+    <div class="unit-box vmin-box">20vmin</div>
+    <div class="unit-box vmax-box">20vmax</div>
+  </section>
+
+  <section class="unit-container">
+    <!-- Absolute Units -->
+    <div class="unit-box cm-box">5cm x 3cm</div>
+    <div class="unit-box mm-box">50mm x 30mm</div>
+    <div class="unit-box in-box">2in x 1in</div>
+    <div class="unit-box px-box">150px x 100px</div>
+    <div class="unit-box pt-box">72pt x 36pt</div>
+    <div class="unit-box pc-box">6pc x 3pc</div>
+  
+  <!-- Relative units -->
+  <p class="em-example">This is an example of 2em font size.</p>
+  <p class="ex-example">This is an example of 2ex font size.</p>
+  <p class="ch-example">This is a box with width of 20ch (20 characters).</p>
+  <p class="rem-example">This is an example of 1.5rem font size.</p>
+
+  <!-- Viewport units -->
+  <div class="vh-example">This box is 50% of the viewport height.</div>
+  <div class="vw-example">This box is 50% of the viewport width.</div>
+  <p class="vmin-example">This text is 10vmin font size.</p>
+  <p class="vmax-example">This text is 10vmax font size.</p>
+
+  <!-- Absolute units -->
+  <div class="cm-example">This box is 5cm by 2cm.</div>
+  <div class="mm-example">This box is 50mm by 20mm.</div>
+  <div class="in-example">This box is 2in by 1in.</div>
+  <div class="px-example">This box is 100px by 50px.</div>
+  <p class="pc-example">This is an example of 12pc font size.</p>
+  <p class="pt-example">This is an example of 24pt font size.</p>
+
+
+
+  
+  </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
